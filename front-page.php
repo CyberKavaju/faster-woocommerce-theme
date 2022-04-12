@@ -1,3 +1,9 @@
 <?php get_header(); ?>
-  <h1>home page</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>homepage</h1>
+      </div>
+    </div>
+  </div>
 <?php get_footer(); ?>
