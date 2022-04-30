@@ -12,18 +12,45 @@ header{
   padding: 10px;
   box-shadow: #666 0px 0px 5px;
 }
+img.logo{
+  height: 50px;
+  margin-right: 10px;
+}
 /*NAV*/
-.menu-header-menu-container .menu>li{
+@media screen and (min-width: 767px){
+  nav#mobile-menu{
+    display: none;
+  }
+}
+@media screen and (max-width: 767px){
+  nav#mobile-menu{
+    display: block;
+  }
+  nav#web-menu{
+    display: none;
+  }
+}
+div.header-menu ul{
+  margin-top: 1rem;
+}
+div.header-menu ul.menu li{
   display: inline-block;
   margin: 0 10px;
   list-style: none;
 }
-.menu-header-menu-container .menu > li > a{
+div.header-menu ul.menu li > a{
   color: var(--color-header);
   text-decoration: none;
   font-size: 1.2em;
+  padding: 10px;
 }
 /*MAIN*/
+.hero{
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  box-shadow: #666 0px 0px 5px;
+}
 /*PRODUCTS*/
 /*FOOTER*/
 footer {

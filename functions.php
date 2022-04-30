@@ -25,3 +25,15 @@ function register_my_menus() {
   );
 }
 add_action('init', 'register_my_menus');
+
+
+function faster_custom_logo_setup()
+{
+  add_theme_support('custom-logo', array(
+    'height' => 100,
+    'width' => 400,
+    'flex-width' => true,
+    'flex-height' => true,
+  ));
+}
+add_action('after_setup_theme', 'faster_custom_logo_setup');

@@ -14,7 +14,15 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <h1><a href="<?php echo get_home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+          <?php
+          $custom_logo_id = get_theme_mod('custom_logo');
+          $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+          if (has_custom_logo()) {
+            echo '<img src="' . esc_url($logo[0]) . '" class="logo" alt="' . get_bloginfo('name') . '">';
+          } else {
+            echo '<h1>' . get_bloginfo('name') . '</h1>';
+          }
+          ?>
           <h5><?php bloginfo('description'); ?></h5>
         </div>
         <div class="col">
