@@ -37,3 +37,19 @@ function faster_custom_logo_setup()
   ));
 }
 add_action('after_setup_theme', 'faster_custom_logo_setup');
+//add sopport  
+add_theme_support('post-thumbnails');
+//add image sizes
+add_image_size('post_image', 1000, 600, true);
+//add widgets
+function herro_position() {
+  register_sidebar( array(
+    'name'          => 'Herro',
+    'id'            => 'herro',
+    'before_widget' => '<div class="sidebar-module">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>',
+  ) );
+}
+add_action( 'widgets_init', 'herro_position' );
